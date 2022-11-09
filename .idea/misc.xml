@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.16203703703703703" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/button_blue.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/button_navy.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/drawable/curve_filled_cca_completed.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/curve_filled_cca_not_available.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/curve_filled_cca_pending.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/curved_filled_layout.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/curved_rel_layout.xml" value="0.22256410256410256" />
+        <entry key="app/src/main/res/drawable/date_number_background.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/day_selected.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/dialoguebottomcurve.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/drawable/dialoguetopcurve.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/drawable/edit_text_login.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/edittext_cursor.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/edittext_greybg.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/event_spinnerbg.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/drawable/gridselect.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/home_list_selector.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/list_calendar_selector.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/normal_day.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/notifiydate.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/parent_slot_new.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/pay_button_shape.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/drawable/rect_green.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/drawable/rect_toast_error.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/drawable/rect_toast_success.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/drawable/rectangle_blue_update.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/rectangle_orange.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/rectangle_red.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/drawable/rectangular_border_cca_week.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/rectangular_border_payment.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/drawable/shape_circle_navy.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/slotbooked_curved_rel_layout.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/slotbookedbyuser_curved_rel_layout.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/slotcancelbyuser_curved_rel_layout.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/spinner_bg.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/time_curved_rel_layout.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/today.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/triangle.xml" value="0.221" />
+        <entry key="app/src/main/res/layout/activity_audio_notification.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_cca.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_ccas_review.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_ccas_review_after_submission.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_ccas_review_edit_after_submission.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_ccaselection.xml" value="0.5449515905947441" />
+        <entry key="app/src/main/res/layout/activity_customwebviewmaps.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_external_provider.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_information_ccaactivity.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_information_detail.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_parents_meeting_calendar.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/activity_parents_meeting_info.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_parents_meeting_time_slot.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_payment.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_payment_detail.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_payment_pay.xml" value="0.13632246376811594" />
+        <entry key="app/src/main/res/layout/activity_payment_pdf_download.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_payment_print.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_payment_share.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_photos_recycler_view.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_photos_view_pager.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_photos_view_recycler_view.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_review_appointments.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/activity_social_media.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_term_calendar.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_terms_of_services.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_text_notification.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_video_notification.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/activity_webview_loader.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/adapter_cca_activity.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/adapter_cca_final_review.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/adapter_cca_first_list.xml" value="0.33589743589743587" />
+        <entry key="app/src/main/res/layout/adapter_cca_review_after_submit.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/adapter_cca_review_attendancelist.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/adapter_ccalist_activity_new.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/adapter_notification.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/adapter_parents_essential.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/adapter_payment_recycler.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/adapter_review_appointments.xml" value="0.33589743589743587" />
+        <entry key="app/src/main/res/layout/adapter_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/adapter_student_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/adapter_weeklist_cca.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/alert_dialog_double_button_layout.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/alert_dialogue_layout.xml" value="0.5572842998585573" />
+        <entry key="app/src/main/res/layout/alert_dialogue_ok_layout.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/common_header_single.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/contactusdetails.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/custom_homelist.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/custom_pdf_adapter_row_new.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/custom_toast_error.xml" value="0.1609375" />
+        <entry key="app/src/main/res/layout/custom_toast_success.xml" value="0.1609375" />
+        <entry key="app/src/main/res/layout/custombanner_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialog_alert_review_layout.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/dialog_attendance_list.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/dialog_room_slot_list.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/dialog_staff_list.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/dialog_student_list.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/dialog_updateversion.xml" value="0.17889492753623187" />
+        <entry key="app/src/main/res/layout/dialogue_calendar_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialogue_change_password.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialogue_forgot_password.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialogue_ok_alert.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/dialogue_signu_up.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialogue_student_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_c_c_a.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_contact_us.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/fragment_gallery_new.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/fragment_homescreen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_parents_essentials.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_parents_meeting.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_payment.xml" value="0.10207700101317123" />
+        <entry key="app/src/main/res/layout/fragment_room_list_adapter.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_student_list_adapter.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/gallery_thumbnail_recyclerview_adapter.xml" value="0.33589743589743587" />
+        <entry key="app/src/main/res/layout/header_bar_fragment.xml" value="0.1640625" />
+        <entry key="app/src/main/res/layout/layout_day_view.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/layout_photo_imagepager_adapter.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/layout_updated.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/photos_recyclerview_adapter.xml" value="0.33589743589743587" />
+        <entry key="app/src/main/res/layout/photos_view_recyclerview_adapter.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/staff_list_adapter.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/student_list_adapter.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/time_slot_parents_evening_adapter.xml" value="0.34010416666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

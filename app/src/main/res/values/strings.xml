@@ -1,0 +1,297 @@
+<resources>
+    <string name="app_name">NAISAK</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="null_value"></string>
+    <string name="introduction">Introduction:</string>
+    <string name="no_internet">Network error occurred. Please check your internet connection and try again later</string>
+
+
+    <string-array name="navigation_item_reg">
+        <!-- 0 -->
+        <item>Home</item>
+        <!-- 1 -->
+        <item>Calendar</item>
+        <!-- 2 -->
+        <item>Notifications</item>
+        <!-- 3 -->
+        <item>Communications</item>
+        <!-- 4 -->
+        <item>Parents Meeting</item>
+        <!-- 5 -->
+        <item>Gallery</item>
+        <!-- 6 -->
+        <item>ECA</item>
+        <!-- 7 -->
+        <item>Payments</item>
+        <!-- 8 -->
+        <item>Parent Essentials</item>
+
+        <!-- 9 -->
+        <item>Nord Anglia Education</item>
+        <!-- 10 -->
+        <item>Contact Us</item>
+        <item>Settings</item>
+    </string-array>
+    <string-array name="navigation_item_guest">
+        <!-- 0 -->
+        <item>Home</item>
+        <!-- 1 -->
+        <item>Calendar</item>
+        <!-- 2 -->
+        <item>Notifications</item>
+        <!-- 3 -->
+        <item>Communications</item>
+        <!-- 4 -->
+        <item>Parents Meeting</item>
+        <!-- 5 -->
+        <item>Gallery</item>
+        <!-- 6 -->
+        <item>ECA</item>
+        <!-- 7 -->
+        <item>Payments</item>
+        <!-- 8 -->
+        <item>Parent Essentials</item>
+
+        <!-- 9 -->
+        <item>Nord Anglia Education</item>
+        <!-- 10 -->
+        <item>Contact Us</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string-array name="navigation_item_reg_icons">
+        <!-- 0 -->
+        <item>@drawable/home</item>
+        <!-- 1 -->
+        <item>@drawable/calendar</item>
+        <!-- 2 -->
+        <item>@drawable/notif</item>
+        <!-- 3 -->
+        <item>@drawable/communication</item>
+        <!-- 4 -->
+        <item>@drawable/parentevening</item>
+        <!-- 5 -->
+        <item>@drawable/gallery</item>
+        <!-- 6 -->
+        <item>@drawable/ccas</item>
+        <!-- 7 -->
+        <item>@drawable/payment</item>
+        <!-- 8 -->
+        <item>@drawable/parent</item>
+        <!-- 9 -->
+        <item>@drawable/naeprogramme</item>
+        <!-- 10 -->
+        <item>@drawable/contacts</item>
+        <item>@drawable/settings_side</item>
+    </string-array>
+    <string-array name="navigation_item_guest_icons">
+        <!-- 0 -->
+        <item>@drawable/home</item>
+        <!-- 1 -->
+        <item>@drawable/calendar</item>
+        <!-- 2 -->
+        <item>@drawable/notif</item>
+        <!-- 3 -->
+        <item>@drawable/communication</item>
+        <!-- 4 -->
+        <item>@drawable/parentevening</item>
+        <!-- 5 -->
+        <item>@drawable/gallery</item>
+        <!-- 6 -->
+        <item>@drawable/ccas</item>
+        <!-- 7 -->
+        <item>@drawable/payment</item>
+        <!-- 8 -->
+        <item>@drawable/parent</item>
+        <!-- 9 -->
+        <item>@drawable/naeprogramme</item>
+        <!-- 10 -->
+        <item>@drawable/contacts</item>
+        <item>@drawable/settings_side</item>
+    </string-array>
+    <array name="calendar_row_colors">
+        <item>@color/cal_row_1</item>
+        <item>@color/cal_row_2</item>
+        <item>@color/cal_row_3</item>
+        <item>@color/cal_row_4</item>
+    </array>
+
+    <string-array name="month31">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="month30">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="day">
+        <item>DAY</item>
+    </string-array>
+    <string-array name="month29">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+    </string-array>
+    <string-array name="month28">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+    </string-array>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="add_cal_success">Event added to device calendar</string>
+    <string name="del_cal_success">Event removed from device calendar</string>
+    <string name="del_cal_fail">Event deletion failed</string>
+    <string name="add_all_cal_success">Added all events to device calendar</string>
+    <string name="del_all_cal_success">Removed all events from device calendar</string>
+    <string name="no_evnt_details">Not enough details to add to calendar</string>
+    <string name="datexpirecontact">Booking and cancellation date is over</string>
+
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+    <string name="monday">MON</string>
+    <string name="tuesday">TUE</string>
+    <string name="wednesday">WED</string>
+    <string name="thursday">THU</string>
+    <string name="friday">FRI</string>
+    <string name="saturday">SAT</string>
+    <string name="sunday">SUN</string>
+    <string name="jan_short">JAN</string>
+    <string name="feb_short">FEB</string>
+    <string name="mar_short">MAR</string>
+    <string name="apr_short">APR</string>
+    <string name="may_short">MAY</string>
+    <string name="jun_short">JUN</string>
+    <string name="jul_short">JUL</string>
+    <string name="aug_short">AUG</string>
+    <string name="sep_short">SEP</string>
+    <string name="oct_short">OCT</string>
+    <string name="nov_short">NOV</string>
+    <string name="dec_short">DEC</string>
+    <string name="force_update">There is a newer version available for download! Please update the app by visiting the Google Play Store</string>
+    <string name="new_version_available">New Version Available</string>
+    <string name="common_error">Cannot continue. Please try again later</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deltechoicealertques">"    Do you want to delete this choice?"</string>
+
+</resources>

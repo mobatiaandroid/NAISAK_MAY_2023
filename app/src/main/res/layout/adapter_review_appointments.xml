@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        card_view:cardCornerRadius="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/gridClickRelative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="1dp">
+
+                <com.github.siyamed.shapeimageview.CircularImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/student"
+                    app:siBorderColor="#A0DAE5"
+                    app:siBorderWidth="1dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/maincell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/confirmationImageview"
+                android:layout_toRightOf="@+id/gridClickRelative"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25">
+
+                        <TextView
+                            android:id="@+id/studNameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textSize="16dp"
+
+                            android:text="Student" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:gravity="center"
+
+                            android:text=":" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                        <TextView
+                            android:id="@+id/studNameTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:textSize="16dp"
+
+                            android:text="Student"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25">
+
+                        <TextView
+                            android:id="@+id/classNameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textSize="16dp"
+
+                            android:text="Class" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:gravity="center"
+
+                            android:text=":" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                        <TextView
+                            android:id="@+id/classNameTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="Student"
+                            android:textSize="16dp"
+
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25">
+
+                        <TextView
+                            android:id="@+id/staffNameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textSize="16dp"
+
+                            android:text="Staff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:gravity="center"
+
+                            android:text=":" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                        <TextView
+                            android:id="@+id/staffNameTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="Student"
+                            android:textSize="16dp"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/vpml"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:text="Click here for VPM Link"
+                    android:background="@drawable/button_blue"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/confirmationImageview"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/tick_icon" />
+            <ImageView
+                android:id="@+id/addTocalendar"
+                android:layout_width="55dp"
+                android:layout_below="@+id/reserveLinear"
+                android:layout_toLeftOf="@+id/confirmAppointment"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:visibility="visible"
+                android:background="@drawable/addtocalendar" />
+            <ImageView
+                android:id="@+id/cancelAppointment"
+                android:layout_width="40dp"
+                android:layout_below="@+id/reserveLinear"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:visibility="visible"
+                android:background="@drawable/cancel" />
+            <ImageView
+                android:id="@+id/confirmAppointment"
+                android:layout_width="40dp"
+                android:layout_below="@+id/reserveLinear"
+                android:layout_toLeftOf="@+id/cancelAppointment"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                android:background="@drawable/confirm" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/maincell"
+                android:gravity="center_vertical"
+                android:id="@+id/reserveLinear"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/reserveTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="16dp"
+                    android:text="Reserved date and time :" />
+
+                <!--  <com.mobatia.naisapp.manager.CustomFontSansProTextBlackSemiBold
+                      android:id="@+id/reserveDateTimeTextView"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="5dp"
+                      android:maxLines="2"
+                      android:textColor="@color/black"
+                      android:textSize="16dp"
+
+                      />-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reserveDateTimeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reserveLinear"
+                android:layout_toLeftOf="@+id/addTocalendar"
+                android:maxLines="2"
+                android:text=""
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:layout_marginBottom="5dp"
+
+                />
+            <TextView
+                android:id="@+id/expireDateTimeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reserveDateTimeTextView"
+                android:layout_toLeftOf="@+id/addTocalendar"
+                android:maxLines="2"
+                android:layout_alignLeft="@+id/reserveDateTimeTextView"
+                android:text="Confirm/Cancellation closes at sdssddsds"
+                android:gravity="center_vertical"
+                android:textColor="@color/rel_nine"
+                android:textSize="16dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="5dp"
+
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "193427222180",
+    "project_id": "naisak-7c980",
+    "storage_bucket": "naisak-7c980.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193427222180:android:b9241af6b1d9d383584031",
+        "android_client_info": {
+          "package_name": "com.nas.naisak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193427222180-f9ta8tl0i3gl4scvmvbub5josnd7her4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkYsM2OqSmlklGs8tVvMMWsFtY-pdNJC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193427222180-f9ta8tl0i3gl4scvmvbub5josnd7her4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "193427222180-54kt6g51n1rk0i96f6mh5uf6vacs6jo4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nais.naisak"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

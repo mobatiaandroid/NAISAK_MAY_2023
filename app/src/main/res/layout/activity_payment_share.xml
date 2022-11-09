@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.payment.payhere.PaymentReceiptShare">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/relative_logo_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/titlebar" />
+
+        <ImageView
+            android:id="@+id/logoClickImgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/heading"
+            android:layout_alignTop="@+id/relative_logo_header"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logotransperent" />
+
+        <RelativeLayout
+            android:id="@+id/bottomRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/heading"
+            android:layout_alignParentTop="true">
+
+
+            <RelativeLayout
+                android:id="@+id/backRelative"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/btn_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btn_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <com.nas.naisak.customviews.textview.CustomFontDJ5TextWhite
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/relative_logo_header"
+            android:background="@color/split_bg"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Invoice"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/heading"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/infoptaicon"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeHeader">
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+    <ProgressBar
+        android:id="@+id/pdfprogress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@anim/customspinner"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/downloadpdf"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/guideline3"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/pdfview"
+        app:layout_constraintEnd_toEndOf="@id/pdfview"
+        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:srcCompat="@drawable/share_payment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

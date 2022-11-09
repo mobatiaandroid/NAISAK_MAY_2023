@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+        <ImageView
+            android:id="@+id/relative_logo_header"
+            android:layout_width="match_parent"
+            android:src="@drawable/titlebar"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/logoClickImgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/relative_logo_header"
+            android:background="@drawable/logotransperent"
+            android:layout_above="@+id/heading" />
+
+        <RelativeLayout
+            android:id="@+id/bottomRel"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/heading"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content" >
+
+
+            <RelativeLayout
+                android:id="@+id/backRelative"
+                android:layout_width="45dp"
+                android:layout_centerVertical="true"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:id="@+id/btn_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btn_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <com.nas.naisak.customviews.textview.CustomFontDJ5TextWhite
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/relative_logo_header"
+            android:background="@color/split_bg"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="External Providers"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@+id/heading"
+            android:background="@drawable/infoptaicon"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeHeader"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/bannerImagePager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:background="@drawable/default_banner"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mnewsLetterListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:layout_weight="70"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@anim/customspinner"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</RelativeLayout>

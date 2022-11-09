@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAISAK-PAYMENT</title>
+</head>
+<body>
+    <form method="POST" action="https://testsecureacceptance.cybersource.com/pay" id="naisak-payment-credit">
+        <input name="bill_to_forename" id="bill_to_forename" type="hidden" value="##FORENAME##">
+        <input name="bill_to_surname" id="bill_to_surname" type="hidden" value="##SURNAME##">
+        <input name="bill_to_email" id="bill_to_email" type="hidden" value="##EMAIL##">
+        <input name="bill_to_address_line1" id="bill_to_address_line1" type="hidden" value="##ADDRESSLINE1##">
+        <input name="bill_to_address_city" id="bill_to_address_city" type="hidden" value="##ADDRESSCITY##">
+        <input name="bill_to_address_postal_code" id="bill_to_address_postal_code" type="hidden" value="##POSTALCODE##">
+        <input name="bill_to_address_state" id="bill_to_address_state" type="hidden" value="##ADDRESS_STATE##">
+        <input name="bill_to_address_country" id="bill_to_address_country" type="hidden" value="##ADDRESS_COUNTRY##">
+        <input name="reference_number" id="reference_number" type="hidden" value="##REFERENCE_NUMBER##">
+        <input name="amount" id="amount" type="hidden" value="##AMOUNT##">
+        <input name="transaction_uuid" id="transaction_uuid" type="hidden" value="##TRANSACTION_UUID##">
+        <input name="access_key" id="access_key" type="hidden" value="##ACCESS_KEY##">
+        <input name="profile_id" id="profile_id" type="hidden" value="##PROFILE_ID##">
+        <input name="locale" id="locale" type="hidden" value="##LOCALE##">
+        <input name="transaction_type" id="transaction_type" type="hidden" value="##TRANSACTION_TYPE##">
+        <input name="currency" id="currency" type="hidden" value="##CURRENCY##">
+        <input name="signed_field_names" id="signed_field_names" type="hidden" value="##SIGNED_FIELD##">
+        <input name="unsigned_field_names" id="unsigned_field_names" type="hidden" value="">
+        <input name="device_fingerprint_id" id="device_fingerprint_id" type="hidden" value="##FINGER_PRINT_ID##">
+        <input name="customer_ip_address" id="customer_ip_address" type="hidden" value="##CUSTOMER_IP_ADDRESS##">
+        <input name="merchantID" id="merchantID" type="hidden" value="##MERCHANTID##">
+        <input name="merchantReferenceCode" id="merchantReferenceCode" type="hidden" value="##MERCHANT_REFERENCE_CODE##">
+        <input name="signed_date_time" id="signed_date_time" type="hidden" value="##SIGNED_DATE_TIME##">
+        <input name="signature" id="signature" type="hidden" value="##SIGNATURE##">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#naisak-payment-credit').submit();
+    });
+    
+</script>
+
+</body>
+
+
+
+</html>

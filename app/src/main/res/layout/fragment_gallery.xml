@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- <com.mobatia.naisapp.manager.CustomFontDJ5TextWhite
+         android:id="@+id/titleTextView"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/split_bg"
+         android:gravity="center"
+         android:paddingBottom="5dp"
+         android:paddingTop="5dp"
+         android:text="Title"
+         android:textColor="@color/white"
+         android:textSize="17dp" />-->
+    <include
+        android:id="@+id/includeRel"
+        layout="@layout/header_bar_fragment"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/includeRel"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:layout_margin="10dp"
+            android:background="@color/photo_bg_gallery">
+
+            <ImageView
+                android:id="@+id/photoImageIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/photo" />
+
+            <RelativeLayout
+                android:id="@+id/viewGridPhotosRelative"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/viewGridPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toLeftOf="@+id/moreImage"
+                    android:clipToPadding="false"
+                    android:horizontalSpacing="1dp"
+                    android:overScrollMode="never"
+                    android:verticalSpacing="1dp" />
+
+                <TextView
+                    android:id="@+id/moreImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/curved_filled_layout"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="MORE IMAGES"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

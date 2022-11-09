@@ -1,0 +1,150 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/sendEmailDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/a"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/dialoguetopcurve"
+                android:gravity="center"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/b"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/iconImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundemail"
+                android:gravity="center"
+                android:scaleType="fitCenter" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/r"
+            android:background="@drawable/dialoguebottomcurve"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <com.nas.naisak.customviews.textview.CustomFontTextViewSemiBoldNoColor
+                android:id="@+id/alertHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Contact Form"
+                android:textColor="@color/rel_two"
+                android:textSize="18sp" />
+
+            <com.nas.naisak.customviews.edittext.CustomFontEditTextRegularNoColor
+                android:id="@+id/text_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/alertHead"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edittext_greybg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="Enter your subject here..."
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp" />
+
+            <com.nas.naisak.customviews.textview.CustomFontTextViewRegularNoColor
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_dialog"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="Enter content:"
+                android:textColor="#ff000000"
+                android:textSize="18sp" />
+
+            <com.nas.naisak.customviews.edittext.CustomFontEditTextRegularNoColor
+                android:id="@+id/text_content"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/text"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edittext_greybg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/text_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/submitButton"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buttonred_new"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

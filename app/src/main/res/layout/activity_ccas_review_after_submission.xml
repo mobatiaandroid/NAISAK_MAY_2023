@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+        <ImageView
+            android:id="@+id/relative_logo_header"
+            android:layout_width="match_parent"
+            android:src="@drawable/titlebar"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/logoClickImgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/relative_logo_header"
+            android:background="@drawable/logotransperent"
+            android:layout_above="@+id/heading" />
+
+        <RelativeLayout
+            android:id="@+id/bottomRel"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/heading"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content" >
+
+
+            <RelativeLayout
+                android:id="@+id/backRelative"
+                android:layout_width="45dp"
+                android:layout_centerVertical="true"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:id="@+id/btn_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btn_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <com.nas.naisak.customviews.textview.CustomFontDJ5TextWhite
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/relative_logo_header"
+            android:background="@color/split_bg"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="ECA"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@+id/heading"
+            android:background="@drawable/infoptaicon"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <com.nas.naisak.customviews.edittext.CustomFontEditTextSemiBoldBlack
+        android:id="@+id/textViewCCAaItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeHeader"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/editCcca"
+        android:text="ECA Review"
+        android:textColor="#ff000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewCCAaItem"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:id="@+id/editCcca"
+        >
+        <ImageView
+            android:id="@+id/editImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/edit_new"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@+id/editImg"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_cca"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewCCAaItem"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/messageTxt"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/messageTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/bannerImg"
+        android:background="@color/cal_row_4">
+
+        <TextView
+            android:id="@+id/msgTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:text="Your options are submitted &amp; waiting for approval"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bannerImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/cca_review_banner" />
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@anim/customspinner"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>
