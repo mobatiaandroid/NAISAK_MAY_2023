@@ -44,7 +44,7 @@ class CCAsReviewActivity : AppCompatActivity() {
 //    var back: ImageView? = null
     var submitBtn: Button? = null
     var home: ImageView? = null
-    var tab_type = "CCAs"
+    var tab_type = "ECAs"
     var extras: Bundle? = null
     var mCCADetailModelArrayList: ArrayList<CCADetailModel>? = ArrayList()
     var mCCAItemIdArray: java.util.ArrayList<String>? = null

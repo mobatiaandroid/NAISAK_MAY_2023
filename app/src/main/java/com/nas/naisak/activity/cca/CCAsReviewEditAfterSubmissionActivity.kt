@@ -194,7 +194,7 @@ class CCAsReviewEditAfterSubmissionActivity : AppCompatActivity() {
                                 )
                                 Toast.makeText(
                                     mContext,
-                                    "No CCA available",
+                                    "No ECA available",
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }

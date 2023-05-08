@@ -9,12 +9,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.TypedArray
 import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.*
-import androidx.annotation.RequiresApi
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -45,6 +45,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
 
     val manager = supportFragmentManager
@@ -61,12 +62,14 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
     lateinit var toolbar: Toolbar
     lateinit var logoClickImgView: ImageView
     lateinit var homelist: ListView
-    lateinit var homeprogress:ProgressBar
+    lateinit var homeprogress: ProgressBar
     var mFragment: Fragment? = null
     var sPosition: Int = 0
     var previousTriggerTypeNew: Int = 0
+    lateinit var requestLauncher: ActivityResultLauncher<String>
+//    lateinit var requestPermissionLauncher: ActivityResultLauncher<String>
 
-    @RequiresApi(Build.VERSION_CODES.M)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(
@@ -75,9 +78,71 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
         )
         setContentView(R.layout.activity_main)
         Intent.FLAG_ACTIVITY_CLEAR_TASK
+//        requestPermissionLauncher = registerForActivityResult(
+//            RequestPermission()
+//        ) { result ->
+//            if (result) {
+//                // PERMISSION GRANTED
+//                Log.e("Permission","Granted")
+//            } else {
+//                Log.e("Permission","Denied")
+//                // PERMISSION NOT GRANTED
+//                val snackbar = Snackbar
+//                    .make(drawer_layout, "Notification Permission Denied", Snackbar.LENGTH_LONG)
+//                    .setAction("Settings") {
+//                        val intent = Intent()
+//                        intent.action = "android.settings.APP_NOTIFICATION_SETTINGS"
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+//                        intent.putExtra("app_package", packageName)
+//                        intent.putExtra("app_uid", applicationInfo.uid)
+//                        intent.putExtra("android.provider.extra.APP_PACKAGE", packageName)
+//                        startActivity(intent)
+//                    }
+//                snackbar.setActionTextColor(Color.RED)
+//                val sbView = snackbar.view
+//                val textView =
+//                    sbView.findViewById<View>(R.id.snackbar_text) as TextView
+//                textView.setTextColor(Color.YELLOW)
+//                snackbar.show()
+//            }
+//        }
+//        askForNotificationPermission()
+
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) !== PackageManager.PERMISSION_GRANTED as Int
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf<String>(Manifest.permission.POST_NOTIFICATIONS),
+                1
+            )
+        }
         initializeUI()
         showfragmenthome()
     }
+//    private fun askForNotificationPermission() {
+//        Log.e("sdk", Build.VERSION.SDK_INT.toString())
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) ==
+//                PackageManager.PERMISSION_GRANTED
+//            ) {
+//                Log.e("Here","if")
+//                // FCM SDK (and your app) can post notifications.
+//            } else if (shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS)) {
+//                // TODO: display an educational UI explaining to the user the features that will be enabled
+//                //       by them granting the POST_NOTIFICATION permission. This UI should provide the user
+//                //       "OK" and "No thanks" buttons. If the user selects "OK," directly request the permission.
+//                //       If the user selects "No thanks," allow the user to continue without notifications.
+//                Log.e("Here","else if")
+//            } else {
+//                // Directly ask for the permission
+//                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+//                Log.e("Here","else")
+//            }
+//        }
+//    }
 
     fun showfragmenthome() {
         val transaction = manager.beginTransaction()
@@ -87,7 +152,6 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
     }
 
     @SuppressLint("Recycle", "WrongViewCast")
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun initializeUI() {
 
         context = this
@@ -184,8 +248,22 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
 
                 }
                 else if (position == 2) {
-                    mFragment = NotificationFragment()
-                    replaceFragmentsSelected(position)
+
+                    requestLauncher =
+                        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+                            if (it) {
+                                mFragment = NotificationFragment()
+                                replaceFragmentsSelected(position)
+                            } else {
+                                showErrorMessage()
+                                mFragment = NotificationFragment()
+                                replaceFragmentsSelected(position)
+                            }
+                        }
+                    askForNotificationPermission()
+
+//                    mFragment = NotificationFragment()
+//                    replaceFragmentsSelected(position)
                 }
                 else if (position == 3 )
                 {
@@ -489,6 +567,14 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
             }
 
         })
+    }
+
+    private fun askForNotificationPermission() {
+        requestLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+    }
+
+    private fun showErrorMessage() {
+        Toast.makeText(this, "Notification Permission Denied", Toast.LENGTH_SHORT).show()
     }
 
 

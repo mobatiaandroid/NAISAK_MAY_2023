@@ -40,6 +40,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
+
 lateinit var relone: RelativeLayout
 lateinit var reltwo: RelativeLayout
 lateinit var relthree: RelativeLayout
@@ -167,7 +168,7 @@ class HomeScreenFragment : Fragment(), View.OnClickListener {
                         override fun run() {
                             handler.post(update)
                         }
-                    }, 100, 3000)
+                    }, 1000, 3000)
 
                     val pageradapter = CustomPagerAdapter(mContext, bannerarray)
                     pager.adapter = pageradapter

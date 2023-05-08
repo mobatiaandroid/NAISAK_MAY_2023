@@ -135,7 +135,7 @@ class TermsOfServiceActivity : AppCompatActivity(){
     {
         webView.settings.javaScriptEnabled = true
         webView.settings.setSupportZoom(false)
-        webView.settings.setAppCacheEnabled(false)
+//        webView.settings.setAppCacheEnabled(false)
         webView.settings.javaScriptCanOpenWindowsAutomatically = true
         webView.settings.domStorageEnabled = true
         webView.settings.databaseEnabled = true

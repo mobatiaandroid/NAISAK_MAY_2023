@@ -39,7 +39,7 @@ class CCASelectionActivity : AppCompatActivity() {
     var relativeHeader: RelativeLayout? = null
     lateinit var msgRelative: RelativeLayout
 
-    var tab_type = "CCAs"
+    var tab_type = "ECAs"
     var extras: Bundle? = null
 
     //    ArrayList<String> mCcaArrayList;
@@ -153,7 +153,11 @@ class CCASelectionActivity : AppCompatActivity() {
             )
         }
         if (ccaedit == 0) {
-            CommonMethods.showDialogueWithOk(mContext,"Please select a CCA or None for each choice and each day","Info")
+            CommonMethods.showDialogueWithOk(
+                mContext,
+                "Please select a ECA or None for each choice and each day",
+                "Info"
+            )
 
             submitBtn!!.getBackground().setAlpha(150)
             submitBtn!!.setVisibility(View.INVISIBLE)
@@ -298,7 +302,7 @@ class CCASelectionActivity : AppCompatActivity() {
                     TVselectedForWeek!!.visibility = View.GONE
                     AppController.weekList!!.get(0).setChoiceStatus("2")
                     AppController.weekList!!.get(0).setChoiceStatus1("2")
-                    //                    Toast.makeText(mContext, "CCA choice not available.", Toast.LENGTH_SHORT).show();
+                    //                    Toast.makeText(mContext, "ECA choice not available.", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -353,7 +357,7 @@ class CCASelectionActivity : AppCompatActivity() {
                     mCCAsActivityAdapter.notifyDataSetChanged()
                     AppController.weekList!!.get(position).setChoiceStatus("2")
                     AppController.weekList!!.get(position).setChoiceStatus1("2")
-                    Toast.makeText(mContext, "CCA choice not available", Toast.LENGTH_SHORT)
+                    Toast.makeText(mContext, "ECA choice not available", Toast.LENGTH_SHORT)
                         .show()
                 } else {
                     textViewCCAaSelect!!.visibility = View.VISIBLE
@@ -439,7 +443,7 @@ class CCASelectionActivity : AppCompatActivity() {
                     mCCAsActivityAdapter.notifyDataSetChanged()
                     AppController.weekList!!.get(j).setChoiceStatus("2")
                     AppController.weekList!!.get(j).setChoiceStatus1("2")
-                    Toast.makeText(mContext, "CCA choice not available", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(mContext, "ECA choice not available", Toast.LENGTH_SHORT).show()
                 } else {
                     textViewCCAaSelect!!.visibility = View.VISIBLE
                     TVselectedForWeek!!.visibility = View.VISIBLE
@@ -574,7 +578,7 @@ class CCASelectionActivity : AppCompatActivity() {
                         mCCAsActivityAdapter.notifyDataSetChanged()
                         AppController.weekList!!.get(j).choiceStatus = "2"
                         AppController.weekList!!.get(j).choiceStatus1 = "2"
-                        //                            Toast.makeText(mContext, "CCA choice not available.", Toast.LENGTH_SHORT).show();
+                        //                            Toast.makeText(mContext, "ECA choice not available.", Toast.LENGTH_SHORT).show();
                     } else {
                         textViewCCAaSelect!!.visibility = View.VISIBLE
                         TVselectedForWeek!!.visibility = View.VISIBLE

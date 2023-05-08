@@ -42,7 +42,7 @@ class CustomwebviewMaps : AppCompatActivity() {
         webview = findViewById(R.id.webviewmaps)
         logoclick = findViewById(R.id.logoclick)
         webview.settings.javaScriptEnabled = true
-        webview.settings.setAppCacheEnabled(true)
+//        webview.settings.setAppCacheEnabled(true)
         webview.settings.javaScriptCanOpenWindowsAutomatically = true
         webview.settings.loadsImagesAutomatically = true
         webview.setBackgroundColor(Color.TRANSPARENT)

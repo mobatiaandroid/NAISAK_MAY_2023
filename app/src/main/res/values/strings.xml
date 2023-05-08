@@ -17,9 +17,9 @@
         <item>Communications</item>
         <!-- 4 -->
         <item>Parents Meeting</item>
-        <!-- 5 -->
+<!--         5 -->
         <item>Gallery</item>
-        <!-- 6 -->
+        <!--         6 -->
         <item>ECA</item>
         <!-- 7 -->
         <item>Payments</item>
@@ -41,13 +41,13 @@
         <item>Notifications</item>
         <!-- 3 -->
         <item>Communications</item>
-        <!-- 4 -->
+        <!--         4 -->
         <item>Parents Meeting</item>
-        <!-- 5 -->
+        <!--         5 -->
         <item>Gallery</item>
-        <!-- 6 -->
+        <!--         6 -->
         <item>ECA</item>
-        <!-- 7 -->
+        <!--         7 -->
         <item>Payments</item>
         <!-- 8 -->
         <item>Parent Essentials</item>
@@ -70,11 +70,11 @@
         <item>@drawable/communication</item>
         <!-- 4 -->
         <item>@drawable/parentevening</item>
-        <!-- 5 -->
+        5
         <item>@drawable/gallery</item>
-        <!-- 6 -->
+        6
         <item>@drawable/ccas</item>
-        <!-- 7 -->
+        7
         <item>@drawable/payment</item>
         <!-- 8 -->
         <item>@drawable/parent</item>
@@ -93,13 +93,13 @@
         <item>@drawable/notif</item>
         <!-- 3 -->
         <item>@drawable/communication</item>
-        <!-- 4 -->
+        4
         <item>@drawable/parentevening</item>
-        <!-- 5 -->
+        5
         <item>@drawable/gallery</item>
-        <!-- 6 -->
+        6
         <item>@drawable/ccas</item>
-        <!-- 7 -->
+        7
         <item>@drawable/payment</item>
         <!-- 8 -->
         <item>@drawable/parent</item>

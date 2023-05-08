@@ -34,7 +34,7 @@ class CCAsReviewAfterSubmissionActivity : AppCompatActivity() {
     var recycler_review: RecyclerView? = null
     var relativeHeader: RelativeLayout? = null
     var attendanceListIcon: ImageView? = null
-    var tab_type = "CCAs"
+    var tab_type = "ECAs"
     var extras: Bundle? = null
     var mCCADetailModelArrayList: ArrayList<CCAReviewAfterSubmissionModel>? = null
     var textViewCCAaItem: TextView? = null
@@ -181,7 +181,7 @@ class CCAsReviewAfterSubmissionActivity : AppCompatActivity() {
                                 )
                                 Toast.makeText(
                                     mContext,
-                                    "No CCA available",
+                                    "No ECA available",
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }

@@ -58,7 +58,7 @@ class CCA_Activity : AppCompatActivity() {
     var studImg: ImageView? = null
     var stud_img = ""
 
-    var tab_type = "CCA Options"
+    var tab_type = "ECA Options"
     var extras: Bundle? = null
     var recycler_review: RecyclerView? = null
     var recyclerViewLayoutManager: GridLayoutManager? = null
@@ -268,7 +268,7 @@ class CCA_Activity : AppCompatActivity() {
                                 enterTextView!!.visibility = View.GONE
                                 Toast.makeText(
                                     this@CCA_Activity,
-                                    "No CCA available",
+                                    "No ECA available",
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }

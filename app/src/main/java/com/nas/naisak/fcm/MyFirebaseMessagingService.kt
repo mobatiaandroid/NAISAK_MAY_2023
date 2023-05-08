@@ -80,6 +80,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     @SuppressLint("ObsoleteSdkInt")
     private fun sendNotification(messageBody: String?) {
+
+
         ShortcutBadger.applyCount(this, badgecount)
         intent = Intent(this, HomeActivity::class.java)
         intent!!.action = System.currentTimeMillis().toString()
