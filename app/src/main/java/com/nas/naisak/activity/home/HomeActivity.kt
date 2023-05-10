@@ -173,7 +173,10 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
             .layoutParams as DrawerLayout.LayoutParams
         params.width = width
         linear_layout.layoutParams = params
-        getBadgeApi()
+        if (!PreferenceManager.getUserCode(context).equals("")) {
+            getBadgeApi()
+        }
+
         val myListAdapter = HomeListAdapter(this, mListItemArray, mListImgArray!!)
         homelist.adapter = myListAdapter
         homelist.onItemLongClickListener = this

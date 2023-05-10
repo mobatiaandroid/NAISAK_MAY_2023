@@ -3,10 +3,8 @@ package com.nas.naisak.activity.login
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -164,30 +162,37 @@ class LoginActivity :Activity() {
         emailHelpImg.setOnClickListener(View.OnClickListener {
 
             if (CommonMethods.isInternetAvailable(mContext)) {
-                val deliveryAddress =
-                    arrayOf("infoalkhor@nais.qa")
-                val emailIntent = Intent(Intent.ACTION_SEND)
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, deliveryAddress)
-                emailIntent.type = "text/plain"
-                emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                val pm: PackageManager = emailHelpImg.context.packageManager
-                val activityList = pm.queryIntentActivities(
-                    emailIntent, 0
-                )
-                for (app in activityList) {
-                    if (app.activityInfo.name.contains("com.google.android.gm")) {
-                        val activity = app.activityInfo
-                        val name = ComponentName(
-                            activity.applicationInfo.packageName, activity.name
-                        )
-                        emailIntent.addCategory(Intent.CATEGORY_LAUNCHER)
-                        emailIntent.flags = (Intent.FLAG_ACTIVITY_NEW_TASK
-                                or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
-                        emailIntent.component = name
-                        emailHelpImg.context.startActivity(emailIntent)
-                        break
-                    }
-                }
+//                val deliveryAddress =
+//                    arrayOf("infoalkhor@nais.qa")
+//                val emailIntent = Intent(Intent.ACTION_SEND)
+//                emailIntent.putExtra(Intent.EXTRA_EMAIL, deliveryAddress)
+//                emailIntent.type = "text/plain"
+//                emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+//                val pm: PackageManager = emailHelpImg.context.packageManager
+//                val activityList = pm.queryIntentActivities(
+//                    emailIntent, 0
+//                )
+//                for (app in activityList) {
+//                    if (app.activityInfo.name.contains("com.google.android.gm")) {
+//                        val activity = app.activityInfo
+//                        val name = ComponentName(
+//                            activity.applicationInfo.packageName, activity.name
+//                        )
+//                        emailIntent.addCategory(Intent.CATEGORY_LAUNCHER)
+//                        emailIntent.flags = (Intent.FLAG_ACTIVITY_NEW_TASK
+//                                or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
+//                        emailIntent.component = name
+//                        emailHelpImg.context.startActivity(emailIntent)
+//                        break
+//                    }
+//                }
+
+                val intent = Intent(Intent.ACTION_SEND)
+                val recipients = arrayOf("infoalkhor@nais.qa")
+                intent.putExtra(Intent.EXTRA_EMAIL, recipients)
+                intent.type = "text/html"
+                intent.setPackage("com.google.android.gm")
+                emailHelpImg.context.startActivity(Intent.createChooser(intent, "Send mail"))
             } else {
                 // No internet alert
                 CommonMethods.showSuccessInternetAlert(mContext)

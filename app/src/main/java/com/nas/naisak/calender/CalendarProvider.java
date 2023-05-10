@@ -56,22 +56,21 @@ public class CalendarProvider extends ContentProvider {
         
 
         @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, 
-                              int newVersion) 
-        {
-            Log.w("CalendarProvider", "Upgrading database from version " + oldVersion 
-                  + " to "
-                  + newVersion + ", which will destroy all old data");
-            db.execSQL("DROP TABLE IF EXISTS events");
-            onCreate(db);
-        }
-        
-    	private void createTables(SQLiteDatabase db){
-    		db.execSQL("CREATE TABLE " + EVENTS_TABLE + "(" + ID + " integer primary key autoincrement, " +
-    				EVENT + " TEXT, " + LOCATION + " TEXT, " + DESCRIPTION + " TEXT, "
-    				+ START + " INTEGER, "+ END + " INTEGER, " + START_DAY + " INTEGER, " + END_DAY + " INTEGER, " + COLOR +" INTEGER);");
-    	}
-    }
+		public void onUpgrade(SQLiteDatabase db, int oldVersion,
+							  int newVersion) {
+			Log.w("CalendarProvider", "Upgrading database from version " + oldVersion
+					+ " to "
+					+ newVersion + ", which will destroy all old data");
+			db.execSQL("DROP TABLE IF EXISTS events");
+			onCreate(db);
+		}
+
+		private void createTables(SQLiteDatabase db) {
+			db.execSQL("CREATE TABLE " + EVENTS_TABLE + "(" + ID + " integer primary key autoincrement, " +
+					EVENT + " TEXT, " + LOCATION + " TEXT, " + DESCRIPTION + " TEXT, "
+					+ START + " INTEGER, " + END + " INTEGER, " + START_DAY + " INTEGER, " + END_DAY + " INTEGER, " + COLOR + " INTEGER);");
+		}
+	}
 
 	@Override
 	public int delete(Uri uri, String selection, String[] selectionArgs) {

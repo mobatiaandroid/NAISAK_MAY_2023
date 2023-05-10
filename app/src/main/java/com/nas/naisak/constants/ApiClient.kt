@@ -25,9 +25,7 @@ var BASE_URL = "http://naisakv2.mobatia.in:8081/"
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
-
             return retrofit.create(ApiInterface::class.java)
-
         }
 
 }

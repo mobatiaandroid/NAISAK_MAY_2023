@@ -128,7 +128,11 @@ class HomeScreenFragment : Fragment(), View.OnClickListener {
 
         initializeUI()
         getbannerimages()
-        getBadgeApi()
+        if (!PreferenceManager.getUserCode(mContext).equals("")) {
+            Log.e("CON", "WORKS")
+            getBadgeApi()
+        }
+
         var internetCheck = CommonMethods.isInternetAvailable(mContext)
         setListeners()
         getButtonBgAndTextImages()
@@ -147,8 +151,9 @@ class HomeScreenFragment : Fragment(), View.OnClickListener {
                 response: Response<Bannerresponse>
             ) {
                 if (response.body()!!.status==100){
-                    bannerarray.addAll(response.body()!!.data.banner_images)
 
+                    bannerarray.addAll(response.body()!!.data.banner_images)
+                    Log.e("WORK", "1")
                     val handler = Handler()
                     val update = Runnable {
                         if (currentPage == bannerarray.size
@@ -163,6 +168,7 @@ class HomeScreenFragment : Fragment(), View.OnClickListener {
                                 .setCurrentItem(currentPage++, true)
                         }
                     }
+                    Log.e("WORK", "2")
                     val swipeTimer = Timer()
                     swipeTimer.schedule(object : TimerTask() {
                         override fun run() {
@@ -173,10 +179,13 @@ class HomeScreenFragment : Fragment(), View.OnClickListener {
                     val pageradapter = CustomPagerAdapter(mContext, bannerarray)
                     pager.adapter = pageradapter
                     var androidCMS = response.body()!!.data.android_app_version
+                    Log.e("WORK", "3")
                     var version: String = BuildConfig.VERSION_NAME
+                    Log.e("WORK", "4")
                     if (androidCMS.equals(version)) {
-
+                        Log.e("WORK", "5")
                     } else {
+                        Log.e("WORK", "6")
                         showforceupdate(mContext)
                     }
                 }
@@ -187,6 +196,7 @@ class HomeScreenFragment : Fragment(), View.OnClickListener {
     }
 
     private fun setListeners() {
+        Log.e("IT WORKS", "111")
         relone.setOnClickListener(this)
         reltwo.setOnClickListener(this)
         relthree.setOnClickListener(this)
