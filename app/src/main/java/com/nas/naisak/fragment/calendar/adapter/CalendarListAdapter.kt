@@ -423,4 +423,5 @@ class CalendarListAdapter(
         val eventIDlong = reminderUri!!.lastPathSegment!!.toLong()
         AppController.eventIdList.add(eventID.toString())
     }
+
 }

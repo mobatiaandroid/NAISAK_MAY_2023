@@ -7,5 +7,6 @@
         <domain includeSubdomains="true">naisakcore.mobatia.in:5000</domain>
         <domain includeSubdomains="true">naisakcore.mobatia.in</domain>
         <domain includeSubdomains="true">core-naisak.nais.qa</domain>
+        <domain includeSubdomains="true">ec2-54-158-73-106.compute-1.amazonaws.com</domain>
     </domain-config>
 </network-security-config>

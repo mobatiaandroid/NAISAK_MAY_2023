@@ -10,9 +10,11 @@ import android.content.pm.PackageManager
 import android.content.res.TypedArray
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.*
+import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.ActionBar
@@ -23,6 +25,7 @@ import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.google.android.material.snackbar.Snackbar
 import com.nas.naisak.R
 import com.nas.naisak.activity.home.adapter.HomeListAdapter
 import com.nas.naisak.activity.login.LoginActivity
@@ -78,35 +81,48 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
         )
         setContentView(R.layout.activity_main)
         Intent.FLAG_ACTIVITY_CLEAR_TASK
-//        requestPermissionLauncher = registerForActivityResult(
-//            RequestPermission()
-//        ) { result ->
-//            if (result) {
-//                // PERMISSION GRANTED
-//                Log.e("Permission","Granted")
-//            } else {
-//                Log.e("Permission","Denied")
-//                // PERMISSION NOT GRANTED
-//                val snackbar = Snackbar
-//                    .make(drawer_layout, "Notification Permission Denied", Snackbar.LENGTH_LONG)
-//                    .setAction("Settings") {
-//                        val intent = Intent()
-//                        intent.action = "android.settings.APP_NOTIFICATION_SETTINGS"
-//                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//                        intent.putExtra("app_package", packageName)
-//                        intent.putExtra("app_uid", applicationInfo.uid)
-//                        intent.putExtra("android.provider.extra.APP_PACKAGE", packageName)
-//                        startActivity(intent)
-//                    }
-//                snackbar.setActionTextColor(Color.RED)
-//                val sbView = snackbar.view
-//                val textView =
-//                    sbView.findViewById<View>(R.id.snackbar_text) as TextView
-//                textView.setTextColor(Color.YELLOW)
-//                snackbar.show()
-//            }
-//        }
-//        askForNotificationPermission()
+        requestLauncher = registerForActivityResult(
+            ActivityResultContracts.RequestPermission(),
+            ActivityResultCallback<Boolean> { result ->
+                Log.e("result", result.toString())
+                if (result) {
+                    // PERMISSION GRANTED
+                    Log.e("result", result.toString())
+                    // Toast.makeText(mContext, String.valueOf(result), Toast.LENGTH_SHORT).show();
+                } else {
+                    // PERMISSION NOT GRANTED
+                    Log.e("denied", result.toString())
+                    val snackbar = Snackbar.make(
+                        drawer_layout,
+                        "Notification Permission Denied",
+                        Snackbar.LENGTH_LONG
+                    )
+                        .setAction("Settings") {
+                            val intent = Intent()
+                            intent.action = "android.settings.APP_NOTIFICATION_SETTINGS"
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            intent.putExtra("app_package", context.packageName)
+                            intent.putExtra("app_uid", context.applicationInfo.uid)
+                            intent.putExtra(
+                                "android.provider.extra.APP_PACKAGE",
+                                context.packageName
+                            )
+                            startActivity(intent)
+                        }
+                    snackbar.setActionTextColor(Color.RED)
+
+                    val view = snackbar.view
+                    val tv = view
+                        .findViewById<View>(com.google.android.material.R.id.snackbar_text) as TextView
+                    tv.setTextColor(Color.WHITE)
+                    snackbar.show()
+
+
+                    // Toast.makeText(mContext, String.valueOf(result), Toast.LENGTH_SHORT).show();
+                }
+            }
+        )
+        askForNotificationPermission()
 
         if (ContextCompat.checkSelfPermission(
                 this,
@@ -252,19 +268,20 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemLongClickListener {
                 }
                 else if (position == 2) {
 
-                    requestLauncher =
-                        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
-                            if (it) {
-                                mFragment = NotificationFragment()
-                                replaceFragmentsSelected(position)
-                            } else {
-                                showErrorMessage()
-                                mFragment = NotificationFragment()
-                                replaceFragmentsSelected(position)
-                            }
-                        }
-                    askForNotificationPermission()
+//                    requestLauncher =
+//                        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+//                            if (it) {
+//
+//                            } else {
+//                                showErrorMessage()
+//                                mFragment = NotificationFragment()
+//                                replaceFragmentsSelected(position)
+//                            }
+//                        }
+//                    askForNotificationPermission()
 
+                    mFragment = NotificationFragment()
+                    replaceFragmentsSelected(position)
 //                    mFragment = NotificationFragment()
 //                    replaceFragmentsSelected(position)
                 }
